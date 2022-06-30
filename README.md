@@ -1,14 +1,11 @@
-LIBFT: <i>YOUR VERY FIRST OWN LIBRARY</i>
+  📝 reading a line from a fd is way too tedious
 
 
-## 💡 About the project
 
-This project gives you the opportunity to rewrite those functions to understand them and learn to use them.
-The library will help you for your future projects in C. Through this project, you have the opportunity
-to extend your list of functions in your own way!
+  💡 This project will not only allow you to add a very convenient function to your collection,
+but it will also make you learn a highly interesting new concept in C programming: static
+variables.
 
 
-## 📋 Third party testers to test the project
 
-* [Tripouille/libfTester](https://github.com/Tripouille/libftTester)
-* [ska42/libft-war-machine](https://github.com/ska42/libft-war-machine)
+  📋 THIRD PARTY TESTERS:
