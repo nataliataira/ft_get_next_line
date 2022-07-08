@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngomes-t <ngomes-t@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:04:38 by ngomes-t          #+#    #+#             */
-/*   Updated: 2022/07/06 04:39:50 by ngomes-t         ###   ########.fr       */
+/*   Updated: 2022/07/08 08:55:55 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	while (s2[j])
 		join[i++] = s2[j++];
 	join[i] = '\0';
+	free(s1);
 	return (join);
 }
 
