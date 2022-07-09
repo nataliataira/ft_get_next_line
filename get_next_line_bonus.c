@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngomes-t <ngomes-t@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/29 17:04:28 by ngomes-t          #+#    #+#             */
-/*   Updated: 2022/07/09 23:17:45 by ngomes-t         ###   ########.fr       */
-
+/*   Created: 2022/07/09 05:04:15 by ngomes-t          #+#    #+#             */
+/*   Updated: 2022/07/09 23:23:13 by ngomes-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_kept_static(char *constant)
 {
@@ -70,15 +69,15 @@ char	*ft_reading_line(int fd, char *constant)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*constant;
+	static char	*constant[1024];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	constant = ft_reading_line(fd, constant);
-	if (!constant)
+	constant[fd] = ft_reading_line(fd, constant[fd]);
+	if (!constant[fd])
 		return (NULL);
-	line = ft_get_line(constant);
-	constant = ft_kept_static(constant);
+	line = ft_get_line(constant[fd]);
+	constant[fd] = ft_kept_static(constant[fd]);
 	return (line);
 }
 
