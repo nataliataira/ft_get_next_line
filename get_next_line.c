@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ngomes-t <ngomes-t@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:04:28 by ngomes-t          #+#    #+#             */
-/*   Updated: 2022/07/08 08:57:55 by coder            ###   ########.fr       */
+/*   Updated: 2022/07/09 23:17:45 by ngomes-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ char	*ft_reading_line(int fd, char *constant)
 	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buf)
 		return (NULL);
+	buf[0] = '\0';
 	bytes_read = 1;
 	while ((!ft_strchr(buf, '\n') && bytes_read != 0))
 	{
@@ -80,28 +81,28 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-#include <fcntl.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-int    main(void)
-{
-    int    fd;
-    char    *ret;
+// #include <fcntl.h>
+// #include <stdio.h>
+// #include <unistd.h>
+// #include <stdlib.h>
+// int    main(void)
+// {
+//     int    fd;
+//     char    *ret;
 
-    fd = open("./test00", O_RDONLY);
-    ret = get_next_line(fd);
-    printf("%s", ret);
-	free(ret);
-	ret = get_next_line(fd);
-    printf("%s", ret);
-	free(ret);
-	ret = get_next_line(fd);
-    printf("%s", ret);
-	free(ret);
-	ret = get_next_line(fd);
-    printf("%s", ret);
-	free(ret);
-	close(fd);
-    return (0);
-}
+//     fd = open("./test00", O_RDONLY);
+//     ret = get_next_line(fd);
+//     printf("%s", ret);
+// 	free(ret);
+// 	ret = get_next_line(fd);
+//     printf("%s", ret);
+// 	free(ret);
+// 	ret = get_next_line(fd);
+//     printf("%s", ret);
+// 	free(ret);
+// 	ret = get_next_line(fd);
+//     printf("%s", ret);
+// 	free(ret);
+// 	close(fd);
+//     return (0);
+// }
