@@ -49,7 +49,6 @@ char	*ft_reading_line(int fd, char *constant)
 		return (NULL);
 	buf[0] = '\0';
 	bytes_read = 1;
-	buf[0] = '\0';
 	while ((!ft_strchr(buf, '\n') && bytes_read != 0))
 	{
 		bytes_read = read(fd, buf, BUFFER_SIZE);
