@@ -7,6 +7,7 @@
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 17:04:28 by ngomes-t          #+#    #+#             */
 /*   Updated: 2022/07/09 23:17:45 by ngomes-t         ###   ########.fr       */
+
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +49,7 @@ char	*ft_reading_line(int fd, char *constant)
 		return (NULL);
 	buf[0] = '\0';
 	bytes_read = 1;
+	buf[0] = '\0';
 	while ((!ft_strchr(buf, '\n') && bytes_read != 0))
 	{
 		bytes_read = read(fd, buf, BUFFER_SIZE);
