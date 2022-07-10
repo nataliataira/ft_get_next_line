@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngomes-t <ngomes-t@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/09 05:04:22 by ngomes-t          #+#    #+#             */
-/*   Updated: 2022/07/09 23:11:25 by ngomes-t         ###   ########.fr       */
+/*   Created: 2022/07/10 02:05:19 by ngomes-t          #+#    #+#             */
+/*   Updated: 2022/07/10 02:06:02 by ngomes-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # include <unistd.h>
 # include <stdlib.h>
